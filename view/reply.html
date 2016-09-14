@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html class="fully">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>真心话，不冒险！</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/mycmt.css">
+<script src="../js/cfg.js"></script>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/zepto.cookie.min.js"></script>
+</head>
+<body class="fully">
+<div class="container fully" id="container">
+	<!-- 能判断是否关注公众号后使用此部分，并在reply-content上添加has-tip -->
+	<!--
+	<div class="tip">
+		<span>请关注我们，有新的回复了提醒你</span>
+		<span class="iknow" id="iknow">知道了</span>
+		<div class="tip-cross"></div>
+	</div>
+	-->
+	<div class="user scope">
+		<div class="user-icon">
+			<img src="../img/1.jpg">
+		</div>
+		<span>AOMORI</span>
+	</div>
+	<div class="reply-question scope">我在你心中的印象是什么？</div>
+	<div class="reply-count">
+		<span>我已经收到了</span>
+		<span class="reply-num">21</span>
+		<span>条回复</span>
+	</div>
+	<div class="reply-content yscroll">		
+
+		<!-- 主人 --><!--
+		<div class="reply-box reply-host" id="reply-box"></div>
+		<div class="reply-more" id="detail-comment">查看全部回复</div>
+		<!-- 主人 -->
+
+
+		<!-- 游客 -->
+		<div class="reply-box reply-guest" id="reply-box"></div>
+		<div class="reply-more" id="reply-more">查看全部回复</div>
+		<div class="reply-all" id="reply-all">
+			<span data-headimgurl="../img/1.jpg">高能发高冷女王动机</span>
+			<span data-headimgurl="../img/1.jpg">sb</span>
+			<span data-headimgurl="../img/1.jpg">好高冷女王帮手</span>
+			<span data-headimgurl="../img/1.jpg">移动发电厂厂长</span>
+			<span data-headimgurl="../img/1.jpg">捉鸡</span>
+			<span data-headimgurl="../img/1.jpg">shashasha</span>
+			<span data-headimgurl="../img/1.jpg">高冷女高冷女王王</span>
+			<span data-headimgurl="../img/1.jpg">哈哈高冷女王哈</span>
+			<span data-headimgurl="../img/1.jpg">高能发动机高能发动机高能</span>
+			<span data-headimgurl="../img/1.jpg">高能发动机</span>
+			<span data-headimgurl="../img/1.jpg">shashashashashasha</span>
+			<span data-headimgurl="../img/1.jpg">高冷高冷女王女王</span>
+			<span data-headimgurl="../img/1.jpg">捉高冷女王鸡</span>
+			<span data-headimgurl="../img/1.jpg">哈哈</span>
+		</div>	
+		<div class="reply-input scope">
+			<input type="text" id="comment-input" placeholder="既然来了，多少说句话嘛">
+			<div class="reply-btn" id="reply-btn">实名发布</div>
+		</div>
+		<div class="reply-sample scope">
+			<!-- <span class="sample-tip">也许你想说</span> -->
+			<div class="sample-box clearfix">
+				<span class="sample">高能发动机</span>
+				<span class="sample">sb</span>
+				<span class="sample">好帮手</span>
+				<span class="sample">移动发电厂厂长</span>
+				<span class="sample">shashasha</span>
+				<span class="sample">高冷女王</span>
+				<span class="sample">捉鸡</span>
+				<span class="sample">哈哈哈</span>
+			</div>
+		</div>
+		<!-- 游客 -->
+
+
+		<div style="height:60px;"></div>
+	</div>	
+	<div class="btm clearfix">
+		<div class="btm-shade"></div>
+		<div class="btm-half" id="show-question">提出我的问题</div>
+		<div class="btm-sep"></div>
+		<div class="btm-half" id="qrcode">
+			<div class="btm-inner">看过都变美的</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+window.data = [
+	{
+        "comment" : "身材",
+        "headimgurl" : "../img/1.jpg"
+    },{
+        "comment" : "鬼鬼身材",
+        "headimgurl" : "../img/1.jpg"
+    },{
+        "comment" : "魔鬼身材哦",
+        "headimgurl" : "../img/1.jpg"
+    },{
+        "comment" : "魔鬼身材身材哦",
+        "headimgurl" : "../img/1.jpg"
+    },{
+        "comment" : "魔鬼身材哈哈哈身材哦哈哈哈",
+        "headimgurl" : "../img/1.jpg"
+    },{
+        "comment" : "魔鬼魔鬼身材哦哈身材哦哈哈哈",
+        "headimgurl" : "../img/1.jpg"
+    },{
+
+    }
+];
+window.data.pop();
+</script>
+<input id="questionid" type="hidden" value="16">
+<input id="visitor_openid" type="hidden" value="oDh4AjyHxaJWn69QxB4AlTL9yQZc">
+<input id="visitor_headimgurl" type="hidden" value="../img/1.jpg">
+<script src="../js/scatter.js"></script>
+<script src="../js/tip.js"></script>
+<script src="../js/launch.js"></script>
+<script src="../js/create-comment.js"></script>
+<script src="../js/detail-comment.js"></script>
+<script src="../js/show-question.js"></script>
+<script src="../js/share.js"></script>
+<script src="../js/qrcode.js"></script>
+<script>
+new Scatter(window.data);
+new CreateComment(window.cfg);
+new DetailComment(window.cfg);
+new ShowQuestion(window.cfg);
+if($.fn.cookie("share-mask") == "1"){
+	new Share();
+	$.fn.cookie("share-mask", null);
+}
+if($.fn.cookie("comment-content")){
+	$("#comment-input").val( $.fn.cookie("comment-content") );
+}
+$("#qrcode").on("click", function(){
+	new Qrcode(window.cfg);
+});
+;(function(){
+	var input = document.getElementById("comment-input");
+	if(!input) return;
+	var timer = null;
+	$(input)
+		.focus(function(){
+			input.scrollIntoView(false);
+			$(".btm").hide();
+			clearTimeout(timer);
+		})
+		.blur(function(){
+			timer = setTimeout(function(){
+				$(".btm").show();
+			}, 500);			
+		});
+})();
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../js/wx-share.js"></script>
+<script>new WXShare(window.cfg);</script>
+</html>

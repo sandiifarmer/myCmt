@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html class="fully">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>真心话，不冒险！</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/mycmt.css">
+<script src="../js/cfg.js"></script>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/zepto.cookie.min.js"></script>
+</head>
+<body class="fully">
+<div class="container fully" id="container">
+	<!-- 能判断是否关注公众号后使用此部分，并在ask-content上添加has-tip -->
+	<!--
+	<div class="tip">
+		<span>请关注我们，有新的回复了提醒你</span>
+		<span class="iknow" id="iknow">知道了</span>
+		<div class="tip-cross"></div>
+	</div>
+	-->
+	<div class="user scope">
+		<div class="user-icon">
+			<img src="../img/1.jpg">
+		</div>
+		<span>AOMORI</span>
+		<div class="ask-btn" id="create-question">提问并分享</div>
+	</div>
+	<div class="ask-input scope">
+		<input type="text" id="question-input" placeholder="点击此处可输入问题">
+	</div>
+	<div class="ask-content yscroll">
+		<div class="ask-entry scope">你觉得我男朋友怎么样？</div>
+		<div class="ask-entry scope">请用一首歌来形容我把！</div>
+		<div class="ask-entry scope">你又见到我的节操吗？</div>
+		<div class="ask-entry scope">你最想问我什么问题？</div>
+		<div class="ask-entry scope">老实跟我讲，你骗过我吗？</div>
+		<div class="ask-entry scope">我在你心里是什么印象？</div>
+		<div class="ask-entry scope">你最近一次哭是什么时候？</div>
+		<div class="ask-entry scope">你最自豪的是什么事？</div>
+		<div class="ask-entry scope">你觉得我男朋友怎么样？</div>
+		<div class="ask-entry scope">请用一首歌来形容我把！</div>
+		<div class="ask-entry scope">你又见到我的节操吗？</div>
+		<div class="ask-entry scope">你最想问我什么问题？</div>
+		<div class="ask-entry scope">老实跟我讲，你骗过我吗？</div>
+		<div class="ask-entry scope">我在你心里是什么印象？</div>
+		<div class="ask-entry scope">你最近一次哭是什么时候？</div>
+		<div class="ask-entry scope">你最自豪的是什么事？</div>
+	</div>
+</div>
+
+</body>
+<input id="openid" type="hidden" value="hanhan">
+<script src="../js/tip.js"></script>
+<script src="../js/create-question.js"></script>
+<script src="../js/share.js"></script>
+<script>
+new CreateQuestion(window.cfg);
+$("#question-input").focus();
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../js/wx-share.js"></script>
+<script>new WXShare(window.cfg, "http://imp.hicamelia.com/");</script>
+</html>

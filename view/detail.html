@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html class="fully">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>真心话，不冒险！</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/mycmt.css">
+<script src="../js/cfg.js"></script>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/zepto.cookie.min.js"></script>
+</head>
+<body class="fully">
+<div class="container fully" id="container">
+	<!-- 能判断是否关注公众号后使用此部分，并在detail-content上添加has-tip -->
+	<!--
+	<div class="tip">
+		<span>请关注我们，有新的回复了提醒你</span>
+		<span class="iknow" id="iknow">知道了</span>
+		<div class="tip-cross"></div>
+	</div>
+	-->
+	<div class="user scope">
+		<div class="user-icon">
+			<img src="../img/1.jpg">
+		</div>
+		<span>AOMORI</span>
+	</div>
+	<div class="reply-question scope">我在你心中的印象是什么？</div>
+	<div class="detail-btn">
+		<div class="reply-more" id="show-comment">返回留言墙</div>
+	</div>
+	<div class="detail-content yscroll">
+		<div class="detail-box" id="detail-box">
+			<div class="detail-one">
+				<div class="detail-time">30分钟前</div>
+				<div class="detail-pic">
+					<img src="../img/1.jpg">
+				</div>
+				<div class="detail-name">HLKH 发布</div>
+				<div class="detail-del" data-commentid="1">删除</div>
+				<div class="detail-text">高冷女王</div>
+				<div class="detail-line"></div>
+			</div>
+			<div class="detail-one">
+				<div class="detail-time">30分钟前</div>
+				<div class="detail-pic">
+					<img src="../img/1.jpg">
+				</div>
+				<div class="detail-name">HLKH 发布</div>
+				<div class="detail-del" data-commentid="2">删除</div>
+				<div class="detail-text">高冷女王</div>
+				<div class="detail-line"></div>
+			</div>
+			<div class="detail-one">
+				<div class="detail-time">30分钟前</div>
+				<div class="detail-pic">
+					<img src="../img/1.jpg">
+				</div>
+				<div class="detail-name">HLKH 发布</div>
+				<div class="detail-del">删除</div>
+				<div class="detail-text">高冷女王高冷女王高冷女王高冷女王高冷女王高冷女王高冷女王高冷女王</div>
+				<div class="detail-line"></div>
+			</div>
+			<div class="detail-one">
+				<div class="detail-time">30分钟前</div>
+				<div class="detail-pic">
+					<img src="../img/1.jpg">
+				</div>
+				<div class="detail-name">HLKH 发布</div>
+				<div class="detail-del">删除</div>
+				<div class="detail-text">高冷女王</div>
+				<div class="detail-line"></div>
+			</div>
+			<div class="detail-one">
+				<div class="detail-time">30分钟前</div>
+				<div class="detail-pic">
+					<img src="../img/1.jpg">
+				</div>
+				<div class="detail-name">HLKH 发布</div>
+				<div class="detail-del">删除</div>
+				<div class="detail-text">高冷女王</div>
+				<div class="detail-line"></div>
+			</div>
+			<div class="detail-one">
+				<div class="detail-time">30分钟前</div>
+				<div class="detail-pic">
+					<img src="../img/1.jpg">
+				</div>
+				<div class="detail-name">HLKH 发布</div>
+				<div class="detail-del">删除</div>
+				<div class="detail-text">高冷女王</div>
+				<div class="detail-line"></div>
+			</div>
+			<div class="detail-one">
+				<div class="detail-time">30分钟前</div>
+				<div class="detail-pic">
+					<img src="../img/1.jpg">
+				</div>
+				<div class="detail-name">HLKH 发布</div>
+				<div class="detail-del">删除</div>
+				<div class="detail-text">高冷女王</div>
+				<div class="detail-line"></div>
+			</div>
+		</div>
+		<div class="detail-more" id="detail-more">查看更多</div>
+		<div style="height:60px;"></div>
+	</div>	
+	<div class="btm clearfix">
+		<div class="btm-shade"></div>
+		<div class="btm-half" id="show-question">提出我的问题</div>
+		<div class="btm-sep"></div>
+		<div class="btm-half" id="qrcode">
+			<div class="btm-inner">看过都变美的</div>
+		</div>
+	</div>
+</div>
+</body>
+<input id="questionid" type="hidden" value="23">
+<input id="visitor_openid" type="hidden" value="hanhan">
+<script src="../js/tip.js"></script>
+<script src="../js/confirm.js"></script>
+<script src="../js/delete-comment.js"></script>
+<script src="../js/query-comment.js"></script>
+<script src="../js/show-comment.js"></script>
+<script src="../js/show-question.js"></script>
+<script>
+new DeleteComment(window.cfg);
+new QueryComment(window.cfg);
+new ShowComment(window.cfg);
+new ShowQuestion(window.cfg);
+$("#container").delegate("#share", "click", function(){ new Share(); });
+</script>
+<script src="../js/qrcode.js"></script>
+<script>
+$("#qrcode").on("click", function(){
+	new Qrcode(window.cfg);
+});
+</script>
+</html>
